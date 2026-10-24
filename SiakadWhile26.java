@@ -1,0 +1,46 @@
+
+import java.util.Scanner;
+
+public class SiakadWhile26 {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+
+        int jml, i;
+        int nilai;
+
+        i = 0;
+
+        System.out.print("Masukkan jumlah mahasiswa: ");
+        jml = sc.nextInt();
+
+        while (i < jml) {
+            System.out.print("Masukkan nilai mahasiswa ke-" + (i + 1) + ": ");
+            nilai = sc.nextInt();
+
+            if (nilai < 0 || nilai > 100) {
+                System.out.println("Nilai tidak valid. Masukkan lagi nilai yang valid!");
+                continue;
+            }
+
+            if (nilai >= 81 && nilai <= 100) {
+                System.out.println("Nilai mahasiswa ke-" + (i + 1) + " adalah A");
+            } else if (nilai >= 73 && nilai <= 80) {
+                System.out.println("Nilai mahasiswa ke-" + (i + 1) + " adalah B+");
+            } else if (nilai >= 65 && nilai <= 72) {
+                System.out.println("Nilai mahasiswa ke-" + (i + 1) + " adalah B");
+            } else if (nilai >= 60 && nilai <= 64) {
+                System.out.println("Nilai mahasiswa ke-" + (i + 1) + " adalah C+");
+            } else if (nilai >= 50 && nilai <= 59) {
+                System.out.println("Nilai mahasiswa ke-" + (i + 1) + " adalah C");
+            } else if (nilai >= 39 && nilai <= 49) {
+                System.out.println("Nilai mahasiswa ke-" + (i + 1) + " adalah D");
+            } else {
+                System.out.println("Nilai mahasiswa ke-" + (i + 1) + " adalah E");
+            }
+
+            i++;
+        }
+
+        sc.close();
+    }
+}
